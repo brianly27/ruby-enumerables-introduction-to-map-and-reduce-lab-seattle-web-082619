@@ -52,5 +52,10 @@ def reduce_to_all_true(array)
 end
 
 def reduce_to_any_true(array)
-
+  counter = 1
+  value = array[0]
+  while counter < array.length
+    array[counter] || value ? value = true : value = false
+  end #while
+  value
 end
