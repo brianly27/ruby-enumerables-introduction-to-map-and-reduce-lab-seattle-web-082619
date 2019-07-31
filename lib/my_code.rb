@@ -43,7 +43,7 @@ end
 
 def reduce_to_all_true(array)
   counter = 1
-  value = array[0]
+  value = array[0].true?
   while counter < array.length
     if array[counter] && value
       value = true
