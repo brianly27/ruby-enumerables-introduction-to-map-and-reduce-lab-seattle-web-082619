@@ -48,6 +48,8 @@ def reduce_to_all_true(array)
     array.each do |e|
       if e == true
         value = true
+      elsif e != true
+        return false
       end
       counter += 1
     end #each
