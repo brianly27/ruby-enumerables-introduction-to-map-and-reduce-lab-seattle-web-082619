@@ -37,8 +37,9 @@ end
   ####    expect(map_to_square([1, 2, 3, -9])).to eq([1, 4, 9, 81])
 
 def map_to_square(array)
-  array.collect do |e|
-    e**2
+  array = []
+  array.each do |e|
+    array << e**2
   end
 end
 ####  describe "reduce_to_total returns a running total when not given a starting point" do
@@ -72,34 +73,6 @@ def reduce_to_all_true(array)
   end #while
 end
 
-##  describe "reduce_to_all_true returns false when any value is false" do
-##    it "reduces correctly" do
-  ##    source_array = [1, 2, true, "razmatazz", false]
-  ##    expect(reduce_to_all_true(source_array)).to be_falsy
-
-
-##  describe "reduce_to_any_true returns true when a truthy value is present" do
-##    it "reduces correctly" do
-  ##    source_array = [ false, nil, nil, nil, true]
-  ##    expect(reduce_to_any_true(source_array)).to eq(true)
-
-#  describe "reduce_to_any_true returns false when no truthy value is present" do
-#    it "reduces correctly" do
-  #    source_array = [ false, nil, nil, nil]
-  #    expect(reduce_to_any_true(source_array)).to eq(false)
-
-#def reduce_to_any_true(array)
-#  bool = false
-#  array.each do |e|
-#    bool = bool || e
-#  end
-#  if bool == nil
-#    bool = false
-#  end
-#  bool
-#end
-
 def reduce_to_any_true(array)
   array.reduce {|memo, n| memo || n}
-
 end
