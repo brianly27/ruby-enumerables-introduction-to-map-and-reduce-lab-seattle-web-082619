@@ -47,7 +47,7 @@ def reduce_to_all_true(array)
   while counter < array.length
     if array[counter] && value
       value = true
-    else
+    else 
       value = false
     end #if
     counter += 1
