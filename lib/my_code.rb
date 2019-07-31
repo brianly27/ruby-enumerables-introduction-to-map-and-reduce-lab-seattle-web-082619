@@ -56,6 +56,7 @@ def reduce_to_any_true(array)
   value = array[0]
   while counter < array.length
     array[counter] || value ? value = true : value = false
+    counter += 1
   end #while
   value
 end
