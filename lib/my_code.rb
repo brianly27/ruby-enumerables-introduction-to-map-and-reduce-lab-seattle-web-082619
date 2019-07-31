@@ -50,7 +50,11 @@ def reduce_to_all_true(array)
     end #if
     counter += 1
   end #while
-  value
+  if value
+    return true
+  else
+    return false
+  end
 end
 
 def reduce_to_any_true(array)
