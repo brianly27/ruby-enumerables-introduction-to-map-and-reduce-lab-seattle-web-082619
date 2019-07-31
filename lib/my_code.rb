@@ -28,9 +28,9 @@ def map_to_double(array)
 end
 
 def map_to_square(array)
-  array = []
-  array.each {|e| array << e**2}
-  array
+  arr = []
+  array.each {|e| arr << e**2}
+  arr
 end
 
 def reduce_to_total(array, start = 0)
