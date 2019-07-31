@@ -84,13 +84,18 @@ end
   #    source_array = [ false, nil, nil, nil]
   #    expect(reduce_to_any_true(source_array)).to eq(false)
 
+#def reduce_to_any_true(array)
+#  bool = false
+#  array.each do |e|
+#    bool = bool || e
+#  end
+#  if bool == nil
+#    bool = false
+#  end
+#  bool
+#end
+
 def reduce_to_any_true(array)
-  bool = false
-  array.each do |e|
-    bool = bool || e
-  end
-  if bool == nil
-    bool = false
-  end
-  bool
+  array.reduce {|memo, n| memo || n}
+
 end
