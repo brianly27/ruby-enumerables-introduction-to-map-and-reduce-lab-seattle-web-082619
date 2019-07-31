@@ -34,7 +34,11 @@ def map_to_square(array)
 end
 
 def reduce_to_total(array, start = 0)
-
+  total = start
+  array.each do |e|
+    total += e
+  end
+  total
 end
 
 # def reduce_to_all_true(array)
