@@ -29,9 +29,7 @@ end
 
 def map_to_square(array)
   array = []
-  array.each do |e|
-    array << e**2
-  end #each
+  array.each {|e| array << e**2}
   array
 end
 
