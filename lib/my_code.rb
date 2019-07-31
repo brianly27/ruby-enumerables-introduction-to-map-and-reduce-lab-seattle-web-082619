@@ -47,6 +47,7 @@ def reduce_to_all_true(array)
   while counter < array.length
     array.each do |e|
       if e {value = true}
+      counter += 1
     end #each
   end #while
 end
