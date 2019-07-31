@@ -32,6 +32,7 @@ def map_to_square(array)
   array.each do |e|
     array << e**2
   end
+  array
 end
 
 def reduce_to_total(array, start = 0)
