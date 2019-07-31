@@ -63,9 +63,13 @@ end
   ###    expect(reduce_to_all_true(source_array)).to be_truthy
 
 def reduce_to_all_true(array)
-  array.reduce do |t, e|
-    t if e
-  end
+  counter = 0
+  value = false
+  while counter < array.length
+    array.each do |e|
+      if e {value = true}
+    end #each
+  end #while
 end
 
 ##  describe "reduce_to_all_true returns false when any value is false" do
