@@ -48,10 +48,9 @@ def reduce_to_all_true(array)
     if array[counter] && value
       value = true
       counter += 1
-    end #each
+    end #if
   end #while
-  value
-end
+end  
 
 def reduce_to_any_true(array)
 
