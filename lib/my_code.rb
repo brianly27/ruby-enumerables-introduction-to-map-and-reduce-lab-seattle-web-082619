@@ -48,7 +48,7 @@ def reduce_to_all_true(array)
     array[counter] && value ? value = true : value = false
     counter += 1
   end #while
-  return value
+  value
 end
 
 def reduce_to_any_true(array)
