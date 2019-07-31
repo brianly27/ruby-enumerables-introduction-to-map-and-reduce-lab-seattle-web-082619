@@ -42,15 +42,11 @@ def reduce_to_total(array, start = 0)
 end
 
 def reduce_to_all_true(array)
-  counter = 0
-  value = false
+  counter = 1
+  value = array[0]
   while counter < array.length
-    array.each do |e|
-      if e == true
-        value = true
-      elsif e != true
-        return false
-      end
+    if array[counter] && value
+      value = true
       counter += 1
     end #each
   end #while
